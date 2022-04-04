@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<form action="#" th:action="@{/addstaff}" th:object="${staff}" method="post">
+    <div class="form-group">
+        <div class="table-responsive">
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Add Staff</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                        <input type="text" th:field="*{name}" id="name" placeholder="Name">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birthPlace">Birth Place</label>
+                        <input type="text" th:field="*{birthPlace}" id="birthPlace" placeholder="Birth Place">
+                        <span th:if="${#fields.hasErrors('birthPlace')}" th:errors="*{birthPlace}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birthDate">Birth Date</label>
+                        <input type="date" th:field="*{birthDate}" id="birthDate" placeholder="Birth Date">
+                        <span th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="position">Position</label>
+                        <input type="text" th:field="*{position}" id="position" placeholder="Position">
+                        <span th:if="${#fields.hasErrors('position')}" th:errors="*{position}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dateJoin">Date Join</label>
+                        <input type="date" th:field="*{dateJoin}" id="dateJoin" placeholder="Date Join">
+                        <span th:if="${#fields.hasErrors('dateJoin')}" th:errors="*{dateJoin}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dateResign">Date Resign</label>
+                        <input type="date" th:field="*{dateResign}" id="dateResign" placeholder="Date Resign">
+                        <span th:if="${#fields.hasErrors('dateResign')}" th:errors="*{dateResign}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="salary">Salary</label>
+                        <input type="text" th:field="*{salary}" id="salary" placeholder="Salary">
+                        <span th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Address</label>
+                        <input type="text" th:field="*{address}" id="address" placeholder="Address">
+                        <span th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="maritalStatus">Marital Status</label>
+                        <input type="text" th:field="*{maritalStatus}" id="maritalStatus" placeholder="Marital Status">
+                        <span th:if="${#fields.hasErrors('maritalStatus')}" th:errors="*{maritalStatus}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="education">Education</label>
+                        <input type="text" th:field="*{education}" id="education" placeholder="Education">
+                        <span th:if="${#fields.hasErrors('education')}" th:errors="*{education}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                        <input type="text" th:field="*{email}" id="email" placeholder="Email">
+                        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Add Staff">
+    </div>
+</form>
+</body>
+</html>
